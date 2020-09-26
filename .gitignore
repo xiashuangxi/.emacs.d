@@ -1,0 +1,7 @@
+*
+!/bin
+!/bin/*.*
+!/core
+!/core/*.el
+!init.el
+!.gitignore
