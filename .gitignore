@@ -3,5 +3,9 @@
 !/bin/*.*
 !/core
 !/core/*.el
+!/images
+!/images/screenshot.png
 !init.el
 !.gitignore
+!README.md
+!LICENSE-MIT
