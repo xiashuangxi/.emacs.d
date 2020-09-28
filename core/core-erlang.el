@@ -1,3 +1,28 @@
+;; -----------------------------------------------------------------------------
+;; Copyright (c) 2020 xiashuangxi<xiashuangxi@hotmail.com>
+;; 
+;; Permission is hereby granted, free of charge, to any person obtaining a copy
+;; of this software and associated documentation files (the "Software"), to deal
+;; in the Software without restriction, including without limitation the rights
+;; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+;; copies of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;; 
+;; The above copyright notice and this permission notice shall be included in all
+;; copies or substantial portions of the Software.
+;; 
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+;; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+;; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+;; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+;;
+;; update:
+;;      2020/09/26 xiashuangxi@hotmail.com
+;; -----------------------------------------------------------------------------
+
 (require 'core-funs)
 (logPrint "加载 core-erlang")
 ;; (use-package erlang
@@ -29,200 +54,8 @@
 ;; It is used by send request functions to determine which server
 ;; must be used for handling a particular message.")
 ;; )
-
-
-;; (use-package erlang
-;;     :defer t
-;;     :init
-;;     :config 
-    
-;;     ;; (use-package distel
-;;     ;;     :ensure t
-;;     ;;     :init (distel-setup))
-
-;;     (use-package ac-erlmode
-;;         :ensure t)
-
-;;     (require 'erlang-start)
-    
-;; )
-
-
-;; (use-package ivy-erlang-complete
-;;     :ensure t
-;;     :config
-;;     (add-hook 'erlang-mode-hook #'ivy-erlang-complete-init)
-;;     ;; automatic update completion data after save
-;;     (add-hook 'after-save-hook #'ivy-erlang-complete-reparse)
-;; )
-
-;; (use-package company-erlang
-;;     :ensure t
-;;     :config 
-;;     (add-hook 'erlang-mode-hook #'company-erlang-init)
-;; )
-
-
-
-;; (setq default-frame-alist  
-;; '((top . 50) (left . 100)  
-;; (width . 95) (height . 35)  
-;; (cursor-color . "blue" )  
-;; (cursor-type . box)  
-;; (foreground-color . "green" )  
-;; (background-color . "black" )  
-;; ))  
-;; (show-paren-mode)  
-;; (global-font-lock-mode t) 
-;; ;; Erlang mode
-;; (setq load-path (cons  "D:/Program Files/erl-23.0/lib/tools-3.4/emacs" load-path))
-;; (setq erlang-root-dir "D:/Program Files/erl-23.0")
-;; (setq exec-path (cons "D:/Program Files/erl-23.0/bin" exec-path))
-;; (require 'erlang-start)
  
-;; ;; Distel
-;; (let ((distel-dir "D:/Program Files/erl-23.0/lib/distel/elisp"))
-;;   (unless (member distel-dir load-path)
-;;     (setq load-path (append load-path (list distel-dir)))))
-;; (require 'distel)
-;; (distel-setup)
-;; ;; Some Erlang customizations
-;; (add-hook 'erlang-mode-hook
-;;   (lambda ()
-;;   ;; when starting an Erlang shell in Emacs, default in the node name
-;;     (setq inferior-erlang-machine-options '("-sname" "emacs"))
-;;     ;; add Erlang functions to an imenu menu
-;;     (imenu-add-to-menubar "imenu")))
-;; ;; A number of the erlang-extended-mode key bindings are useful in the shell too
-;; (defconst distel-shell-keys
-;;   '(("\C-\M-i"   erl-complete)
-;;     ("\M-?"      erl-complete) 
-;;     ("\M-."      erl-find-source-under-point)
-;;     ("\M-,"      erl-find-source-unwind) 
-;;     ("\M-*"      erl-find-source-unwind) 
-;;     )
-;;   "Additional keys to bind when in Erlang shell.")
-;; (add-hook 'erlang-shell-mode-hook
-;;    (lambda ()
-;;      ;; add some Distel bindings to the Erlang shell
-;;      (dolist (spec distel-shell-keys)
-;;        (define-key erlang-shell-mode-map (car spec) (cadr spec)))))
-
-;; (use-package erlang
-;;     :defer t
-;;     :init
-;;     :config 
-    
-;;     (require 'erlang-start)
-    
-;; )
-
-;; (setq load-path (cons  "D:/Program Files/erl-23.0/lib/tools-3.4/emacs" load-path))
-;; (setq erlang-root-dir "D:/Program Files/erl-23.0")
-;; (setq exec-path (cons "D:/Program Files/erl-23.0/bin" exec-path))
-;; (require 'erlang-start)
-
- 
-
-;; ;; Distel
-;; ;; (let ((distel-dir "D:/Program Files/erl-23.0/lib/distel"))
-;; ;;   (unless (member distel-dir load-path)
-;;     ;; (setq load-path (append load-path (list )))))
-;; (require 'distel)
-;; (distel-setup)
-
- 
-
-;; ;; Some Erlang customizations
-;; (add-hook 'erlang-mode-hook
-;;   (lambda ()
-;;   ;; when starting an Erlang shell in Emacs, default in the node name
-;;     (setq inferior-erlang-machine-options '("-sname" "emacs"))
-;;     ;; add Erlang functions to an imenu menu
-;;     (imenu-add-to-menubar "imenu")))
-
- 
-
-;; ;; A number of the erlang-extended-mode key bindings are useful in the shell too
-;; (defconst distel-shell-keys
-;;   '(("/C-/M-i"   erl-complete)
-;;     ("/M-?"      erl-complete) 
-;;     ("/M-."      erl-find-source-under-point)
-;;     ("/M-,"      erl-find-source-unwind) 
-;;     ("/M-*"      erl-find-source-unwind) 
-;;     )
-;;   "Additional keys to bind when in Erlang shell.")
-;; (add-hook 'erlang-shell-mode-hook
-;;    (lambda ()
-;;      ;; add some Distel bindings to the Erlang shell
-;;      (dolist (spec distel-shell-keys)
-;;        (define-key erlang-shell-mode-map (car spec) (cadr spec)))))
-
-
-
-
-
- 
-;;--------------------------erlang----------------------------------------------------
-(setq load-path (cons "D:/Program Files/erl-23.0/lib/tools-3.4/emacs" load-path))
-(setq erlang-root-dir "D:/Program Files/erl-23.0")
-(setq exec-path (cons "D:/Program Files/erl-23.0/bin" exec-path))
-(require 'erlang-start)
-(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
-(add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
-;; (add-to-list 'load-path "~/.emacs.d/erlware-mode")
-
-;; (use-package erlware-mode
-;;     :ensure t)
- 
-;;----------------------distel-------------------
- 
-;; (let ((distel-dir "D:/Program Files/erl-23.0/lib/distel/elisp"))
-;;     (message distel-dir)
-;;     (unless (member distel-dir load-path)
-;;         ;; Add distel-dir to the end of load-path
-;;         (setq load-path (append load-path (list distel-dir)))))
- 
-;; (require 'distel)
-;; (use-package distel
-;;     :ensure t)
-;; (distel-setup)
-;; Some Erlang customizations
-;; (add-hook 'erlang-mode-hook
-;;   (lambda ()
- 
-;;   ;; when starting an Erlang shell in Emacs, default in the node name
-;;     (setq inferior-erlang-machine-options '("-sname" "emacs"))
-    
-;;     ;; add Erlang functions to an imenu menu
-;;     (imenu-add-to-menubar "imenu")))
-;; prevent annoying hang-on-compile
-;; (defvar inferior-erlang-prompt-timeout t)
-;; tell distel to default to that node
-;; (setq erl-nodename-cache
-;;       (make-symbol
-;;        (concat
-;;         "emacs@"
-;;         ;; Mac OS X uses "name.local" instead of "name", this should work
-;;         ;; pretty much anywhere without having to muck with NetInfo
-;;         ;; ... but I only tested it on Mac OS X.
-;;         (car (split-string (shell-command-to-string "hostname"))))))
-;; A number of the erlang-extended-mode key bindings are useful in the shell too
-;; (defconst distel-shell-keys
-;;   '(("\C-\M-i"   erl-complete)
-;;     ("\M-?"      erl-complete)
-;;     ("\M-."      erl-find-source-under-point)
-;;     ("\M-,"      erl-find-source-unwind)
-;;     ("\M-*"      erl-find-source-unwind)
-;;     )
-;;   "Additional keys to bind when in Erlang shell.")
-;; (add-hook 'erlang-shell-mode-hook
-;;   (lambda ()
-;; ;; add some Distel bindings to the Erlang shell
-;;         (dolist (spec distel-shell-keys)
-;;         (define-key erlang-shell-mode-map (car spec) (cadr spec)))))
-
-
+;; -------------------------erlang----------------------------------------------
 (use-package erlang
     :ensure t
     :config
@@ -268,7 +101,7 @@
     ;;     (require 'distel)
     ;;     (distel-setup)
     ;; )
-;; (distel-setup)
+    ;; (distel-setup)
     (add-hook 'erlang-mode-hook
         (lambda ()
             (setq inferior-erlang-machine-options '("-sname" "emacs"))
